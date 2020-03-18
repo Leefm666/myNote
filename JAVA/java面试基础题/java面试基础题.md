@@ -236,3 +236,17 @@ redirect:低.
 
 ![1584022915963](java面试基础题.assets/1584022915963.png)
 
+![1584109561044](java面试基础题.assets/1584109561044.png)
+
+![1584109618271](java面试基础题.assets/1584109618271.png)
+
+A、标准ASCII只使用7个bit，扩展的ASCII使用8个bit。
+
+B、ANSI通常使用 0x00~0x7f 范围的1 个[字节](https://baike.baidu.com/item/字节)来表示 1 个英文字符。超出此范围的使用0x80~0xFFFF来编码，即扩展的ASCII编码。不同 ANSI 编码之间互不兼容。在简体中文Windows操作系统中，ANSI 编码代表 GBK 编码；在繁体中文Windows操作系统中，ANSI编码代表Big5；在日文Windows操作系统中，ANSI 编码代表 Shift_JIS 编码。
+
+C、ANSI通常使用 0x00~0x7f 范围的1 个[字节](https://baike.baidu.com/item/字节)来表示 1 个英文字符，即ASCII码
+
+D、ASCII码包含一些特殊空字符
+
+![1584109765833](java面试基础题.assets/1584109765833.png)
+
