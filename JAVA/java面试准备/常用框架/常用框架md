@@ -1,0 +1,44 @@
+# 什么是spring框架
+
+Spring 是一种轻量级开发框架，旨在提高开发人员的开发效率以及系统的可维护性。Spring 官网：https://spring.io/。
+
+我们一般说 Spring 框架指的都是 Spring Framework，它是很多模块的集合，使用这些模块可以很方便地协助我们进行开发。这些模块是：核心容器、数据访问/集成,、Web、AOP（面向切面编程）、工具、消息和测试模块。比如：Core Container 中的 Core 组件是Spring 所有组件的核心，Beans 组件和 Context 组件是实现IOC和依赖注入的基础，AOP组件用来实现面向切面编程。
+
+Spring 官网列出的 Spring 的 6 个特征:
+
+- **核心技术** ：依赖注入(DI)，AOP，事件(events)，资源，i18n，验证，数据绑定，类型转换，SpEL。
+- **测试** ：模拟对象，TestContext框架，Spring MVC 测试，WebTestClient。
+- **数据访问** ：事务，DAO支持，JDBC，ORM，编组XML。
+- **Web支持** : Spring MVC和Spring WebFlux Web框架。
+- **集成** ：远程处理，JMS，JCA，JMX，电子邮件，任务，调度，缓存。
+- **语言** ：Kotlin，Groovy，动态语言。
+
+# 列举一些重要的spring模块
+
+下图对应的是 Spring4.x 版本。目前最新的5.x版本中 Web 模块的 Portlet 组件已经被废弃掉，同时增加了用于异步响应式处理的 WebFlux 组件。
+
+![Spring主要模块](常用框架md.assets/Spring主要模块.png)
+
+- **Spring Core：** 基础,可以说 Spring 其他所有的功能都需要依赖于该类库。主要提供 IoC 依赖注入功能。
+- **Spring Aspects** ： 该模块为与AspectJ的集成提供支持。
+- **Spring AOP** ：提供了面向切面的编程实现。
+- **Spring JDBC** : Java数据库连接。
+- **Spring JMS** ：Java消息服务。
+- **Spring ORM** : 用于支持Hibernate等ORM工具。
+- **Spring Web** : 为创建Web应用程序提供支持。
+- **Spring Test** : 提供了对 JUnit 和 TestNG 测试的支持。
+
+# springIOC与aop
+
+## 谈谈自己对于springIOC和aop理解
+
+IoC（Inverse of Control:控制反转）是一种**设计思想**，就是 **将原本在程序中手动创建对象的控制权，交由Spring框架来管理。** IoC 在其他语言中也有应用，并非 Spring 特有。 **IoC 容器是 Spring 用来实现 IoC 的载体， IoC 容器实际上就是个Map（key，value）,Map 中存放的是各种对象。**
+
+# spring中的bean的作用域有哪些
+
+- singleton : 唯一 bean 实例，Spring 中的 bean 默认都是单例的。
+- prototype : 每次请求都会创建一个新的 bean 实例。
+- request : 每一次HTTP请求都会产生一个新的bean，该bean仅在当前HTTP request内有效。
+- session : 每一次HTTP请求都会产生一个新的 bean，该bean仅在当前 HTTP session 内有效。
+- global-session： 全局session作用域，仅仅在基于portlet的web应用中才有意义，Spring5已经没有了。Portlet是能够生成语义代码(例如：HTML)片段的小型Java Web插件。它们基于portlet容器，可以像servlet一样处理HTTP请求。但是，与 servlet 不同，每个 portlet 都有不同的会话
+
